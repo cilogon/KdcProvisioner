@@ -172,7 +172,7 @@ class CoKdcProvisionerTarget extends CoProvisionerPluginTarget {
     if(empty($principal)) {
       $coPersonId = $provisioningData['CoPerson']['id'];
       $msg = "getPrincipalFromProvisioningData: ";
-      $msg = $msg . "Unable to find principal of type $principal_type for CO Person ID $coPersonId";
+      $msg = $msg . "Unable to find principal of type $principalType for CO Person ID $coPersonId";
       $this->log($msg);
     }
 
