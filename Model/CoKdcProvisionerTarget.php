@@ -413,6 +413,7 @@ class CoKdcProvisionerTarget extends CoProvisionerPluginTarget {
           // Create the principal.
           try {
             $principalObj = new KADM5Principal($principal);
+            $principalObj->setPolicy('default');
             $this->kdc->createPrincipal($principalObj);
             $msg = "syncPrincipal: Created principal $principal";
             $this->log($msg);
